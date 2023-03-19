@@ -1,9 +1,12 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render } from "@testing-library/react";
+import App from "./App";
+import "@testing-library/jest-dom";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("render the App", () => {
+  test("renders", () => {
+    const { container } = render(<App />);
+    const element = container.querySelector(".App");
+    expect(element).toBeInTheDocument();
+  });
 });
