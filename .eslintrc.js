@@ -5,29 +5,35 @@ module.exports = {
     "jest/globals": true,
   },
   extends: [
-    "plugin:react/recommend",
+    "plugin:react/recommended",
     "standard-with-typescript",
     "prettier",
-    "plugin:prettier/recommend"
+    "plugin:prettier/recommended"
   ],
   overrides: [],
-  parser: "typescript-eslint/parser",
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
     project: "./tsconfig.json",
   },
-  plugins: ["react", "react-hooks", "prettier", "typescript-eslint", "jest"],
+  plugins: ["react", "react-hooks", "prettier", "@typescript-eslint", "jest"],
   rules: {
-    "typescript-eslint/triple-slash-reference": "off",
-    "jsx-a11y/anchor-is-valid": [
+    "prettier/prettier": [
       "error",
       {
-        "components": ["Link"],
-        "specialLink": ["hrefLeft", "hrefRight"],
-        "aspects": ["invalidHref", "preferButton"]
+        "endOfLine": "auto"
       },
     ],
+    "@typescript-eslint/triple-slash-reference": "off",
+    // "jsx-a11y/anchor-is-valid": [
+    //   "error",
+    //   {
+    //     "components": ["Link"],
+    //     "specialLink": ["hrefLeft", "hrefRight"],
+    //     "aspects": ["invalidHref", "preferButton"]
+    //   },
+    // ],
   },
   settings: {
     react: {
