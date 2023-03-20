@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 import { Link } from "react-scroll";
 
 const links = [
@@ -20,7 +20,7 @@ const links = [
   },
 ];
 
-const Nav = () => {
+const Nav = (): ReactElement => {
   const [expand, setExpand] = useState(true);
   const [showNav, setShowNav] = useState(true);
 
