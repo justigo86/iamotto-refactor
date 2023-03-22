@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import React, { ReactElement, useState } from "react";
 import { Link } from "react-scroll";
 
 const links = [
@@ -24,9 +24,9 @@ const Nav = (): ReactElement => {
   const [expand, setExpand] = useState(true);
   const [showNav, setShowNav] = useState(true);
 
-  const handleClick = () => setExpand(!expand);
+  const handleClick = (): void => setExpand(!expand);
 
-  const adjustNavOnScroll = () => {
+  const adjustNavOnScroll = (): void => {
     if (window.scrollY > 500) {
       setShowNav(false);
     } else {
@@ -50,8 +50,14 @@ const Nav = (): ReactElement => {
       <div className="navbar">
         {links.map(link => {
           return (
-            <Link to={link.text} smooth={true} duration={1000} offset={-50}>
-              <a className="tags" key={link.id}>
+            <Link
+              key={link.id}
+              to={link.text}
+              smooth={true}
+              duration={1000}
+              offset={-50}
+            >
+              <a className="tags">
                 <span>0{link.id}</span>
                 {link.text}
               </a>

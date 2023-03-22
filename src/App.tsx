@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import React, { ReactElement } from "react";
 import "./App.scss";
 import Nav from "./components/nav";
 
