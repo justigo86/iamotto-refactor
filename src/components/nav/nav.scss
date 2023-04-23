@@ -37,7 +37,7 @@
 }
 
 .burger {
-  background: white;
+  background: grey;
   height: clamp(0.25rem, .3rem, 2rem);
   width: min(1.9rem, 6vw);
   border-radius: 8px;
@@ -48,7 +48,7 @@
   &::after {
       content: '';
       position: absolute;
-      background: white;
+      background: grey;
       width: clamp(0.25rem, 2.5rem, 3.5rem);
       height: clamp(0.25rem, .3rem, 2rem);
       width: min(2.5rem, 8vw);
@@ -56,26 +56,28 @@
       border-radius: 8px;
       transition: transform 0.5s ease-in-out;
   }
-  // &::before {
-  //     transform: ${(props) => (props.clicked ? 'rotate(0deg)' : 'rotate(45deg) translateY(13px)')} translateY(-.8rem);
-  // }
-  // &::after {
-  //     transform: ${(props) => (props.clicked ? 'rotate(0deg)' : 'rotate(-45deg) translateY(-13px)')} translateY(.8rem);
-  // }
+  &::before {
+    transform: rotate(0deg) translateY(-.8rem);
+  };
+  &::after {
+    transform: rotate(0deg) translateY(.8rem);
+  };
 }
 
 .burger-clicked {
-  background: white;
+  background: grey;
+  // visibility: hidden;
+  background: transparent;
   &::before {
-    transform: rotate(45deg) translateY(13px);
-  };
+    transform: rotate(45deg) translateY(13px) translateY(-.8rem);
+  }
   &::after {
-    transform: rotate(-45deg) translateY(-13px);
-  };
+    transform: rotate(-45deg) translateY(-13px) translateY(.8rem);
+  }
 }
 
 .burger-showNav {
-  visibility: visible
+  visibility: visible;
 }
 
 .navbar {
