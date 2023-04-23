@@ -1,4 +1,4 @@
-.navbarContainer {
+.navbar-container {
   position: sticky;
   top: 0;
   height: 3rem;
@@ -7,18 +7,17 @@
   justify-content: center;
   z-index: 1;
   padding: 2.5rem 2rem;
-  // background: ${(props) => (props.clicked && props.showNav ? 'none' : 'hsla(0, 0%, 0%, .5)')};
   transition: all 0.4s ease-in-out;
   overflow: hidden;
 }
 
-@keyframes menuLoad {
-  0% {
-    left: -5vw;
-  }
-}
+// @keyframes menuLoad {
+//   0% {
+//     left: -5vw;
+//   }
+// }
 
-.menu {
+.navbar-menu {
   height: 3rem;
   width: 3rem;
   cursor: pointer;
@@ -33,22 +32,19 @@
   transition: all 0.3 ease-in-out;
   animation-name: menuLoad;
   animation-duration: .5s;
-  // transform: ${(props) => (props.showNav ? 'none' : 'translateY(-50vh)')};
 }
 
 .burger {
-  background: grey;
+  background: linear-gradient(45deg, #6303B1, #ff0099);
   height: clamp(0.25rem, .3rem, 2rem);
   width: min(1.9rem, 6vw);
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
-  // background: ${(props) => (props.clicked ? 'white' : 'transparent')};
-  // visibility: ${(props) => (props.showNav ? 'visible' : 'hidden')};
   &::before,
   &::after {
       content: '';
       position: absolute;
-      background: grey;
+      background: linear-gradient(45deg, #6303B1, #ff0099);
       width: clamp(0.25rem, 2.5rem, 3.5rem);
       height: clamp(0.25rem, .3rem, 2rem);
       width: min(2.5rem, 8vw);
@@ -65,8 +61,6 @@
 }
 
 .burger-clicked {
-  background: grey;
-  // visibility: hidden;
   background: transparent;
   &::before {
     transform: rotate(45deg) translateY(13px) translateY(-.8rem);
@@ -81,12 +75,10 @@
 }
 
 .navbar {
-  /* border: 2px solid white; */
   width: 85%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  // transform: ${(props) => (props.clicked && props.showNav ? 'translateY(-50vh)' : 'none')};
   transition: transform 0.3s ease-in-out;
 }
 

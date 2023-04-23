@@ -2,13 +2,15 @@ import React, { ReactElement } from "react";
 import "./App.scss";
 import Nav from "./components/nav/nav";
 import Hero from "./components/hero/hero";
+import { Routes, Route } from "react-router-dom";
 
 function App(): ReactElement {
   return (
-    <div className="App">
-      <Nav />
-      <Hero />
-    </div>
+    <Routes>
+      <Route path="/" element={<Nav />}>
+        <Route index element={<Hero />} />
+      </Route>
+    </Routes>
   );
 }
 
