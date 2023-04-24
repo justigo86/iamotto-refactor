@@ -1,3 +1,13 @@
+@mixin animate($duration) {
+  animation: $duration;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
 .navbar-container {
   position: sticky;
   top: 0;
@@ -10,12 +20,6 @@
   transition: all 0.4s ease-in-out;
   overflow: hidden;
 }
-
-// @keyframes menuLoad {
-//   0% {
-//     left: -5vw;
-//   }
-// }
 
 .navbar-menu {
   height: 3rem;
@@ -30,8 +34,12 @@
   top: 0;
   left: 0;
   transition: all 0.3 ease-in-out;
-  animation-name: menuLoad;
-  animation-duration: .5s;
+  @keyframes menuLoad {
+    0% {
+      left: -5vw;
+    }
+  }
+  animation: menuLoad .5s;
 }
 
 .burger {
@@ -82,7 +90,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.tags {
+.navbar-tags {
   color: inherit;
   font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: bold;

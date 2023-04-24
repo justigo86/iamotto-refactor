@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Raleway";
+  src: url('./fonts/Raleway-VariableFont_wght.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-image: url("./photos/circuit-board.svg");
+  background-color: rgb(153, 153, 153);
+  color: hsl(0, 0%, 100%);
+}

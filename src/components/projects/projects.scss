@@ -1,0 +1,157 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+$mediaMobile: 800px;
+$mediaMedium: 1200px;
+
+.projects-container {
+  @include flex-center;
+  min-height: 80vh;
+  overflow: hidden;
+
+  .project-header-title {
+    margin: 5vh;
+    font-size: calc(24px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
+    background-image: linear-gradient(45deg, #6303B1, #ff0099);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+        filter: drop-shadow(2px 2px #000);
+    font-weight: 900;
+  }
+
+  .project-card-container {
+    display: flex;
+    @media screen and (max-width: $mediaMobile) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: $mediaMedium) {
+      flex-direction: column;
+    }
+
+    .project-card {
+      border: 2px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      height: 39vh;
+      width: 30vw;
+      border-radius: 30px;
+      overflow: hidden;
+      margin: 1vh 1vw;
+      @media screen and (max-width: $mediaMobile) {
+        width: 80vw;
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: $mediaMedium) {
+        width: 50vw;
+        flex-direction: column;
+      }
+
+      &:hover > .project-card-header > .project-details {
+        transform: scale(1);
+      }
+
+      &:hover > .project-card-header{
+        filter: grayscale(0);
+      }
+
+      &:hover > .project-card-footer{
+        height: 8vh;
+        width: 32vw;
+        bottom: 0;
+        @media screen and (max-width: $mediaMobile) {
+          width: 85vw;
+        }
+
+        @media screen and (max-width: $mediaMedium) {
+          width: 55vw;
+        }
+        & > div {
+            transform: scale(1);
+            height: auto;
+        }
+      }
+
+      .project-card-header {
+        @include flex-center;
+        filter: grayscale(100%);
+        transition: .3s ease-in-out;
+        height: 100%;
+        width: 100%;
+  
+        .project-details {
+          width: 90%;
+          background: hsla(0, 0%, 0%, .5);
+          border-radius: 20px;
+          transform: scale(0);
+          transition: .5s ease-in-out;
+          white-space: pre-wrap;
+
+          & > p {
+              text-align: center;
+              margin: 4% 0;
+              font-weight: 500;
+              font-size: calc(12px + (20 - 14) * ((50vw - 300px) / (1600 - 300)));
+          }
+        }
+      }
+
+      .project-card-footer {
+        height: 8vh;
+        width: 24vw;
+        border-radius: 8px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        bottom: 15vh;
+        background: linear-gradient(45deg, #6303B1, #ff0099);
+        transition: .5s ease-in-out, width .8s, height .5s;
+
+        @media screen and (max-width: $mediaMobile) {
+          width: 60vw;
+        }
+
+        @media screen and (max-width: $mediaMedium) {
+          width: 32vw;
+        }
+
+        .project-footer-title {
+          font-weight: bold;
+          font-size: calc(18px + (24 - 14) * ((100vw - 300px) / (1600 - 300)));
+          text-shadow: none;
+          filter: drop-shadow(2px 2px #000);
+        }
+
+        .project-footer-links-container {
+          transform: scale(0);
+          transition: all .5s ease-in-out;
+          height: 0;
+
+          .project-footer-link {
+            margin: 0 1vw;
+            padding: 1.5px 3px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            border-radius: 8px;
+            &:hover {
+                background-color: hsla(0, 0%, 0%, .5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

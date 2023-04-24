@@ -1,7 +1,10 @@
 import React, { ReactElement, useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./nav.scss";
-import { Outlet } from "react-router-dom";
+import Hero from "../hero/hero";
+import Projects from "../projects/projects";
+import About from "../about/about";
+import Connect from "../connect/connect";
 
 interface LinkInterface {
   id: number;
@@ -34,8 +37,6 @@ const Nav = (): ReactElement => {
   const handleClick = (): void => {
     setExpandNav(!expandNav);
   };
-  console.log("expand", expandNav);
-  console.log("burger", showBurger);
 
   useEffect(() => {
     const adjustNavOnScroll = (): void => {
@@ -84,7 +85,7 @@ const Nav = (): ReactElement => {
                 smooth={true}
                 duration={1000}
                 offset={-50}
-                className="tags"
+                className="navbar-tags"
               >
                 <span>0{link.id}</span>
                 {link.path}
@@ -93,7 +94,10 @@ const Nav = (): ReactElement => {
           })}
         </div>
       </nav>
-      <Outlet />
+      <Hero />
+      <Projects />
+      <About />
+      <Connect />
     </>
   );
 };

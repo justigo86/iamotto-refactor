@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 
 const About = (): ReactElement => {
-  return <div>Test About</div>;
+  return <div id="about">Test About</div>;
 };
 
 export default About;
