@@ -2,42 +2,28 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    "jest/globals": true,
   },
   extends: [
+    "eslint:recommended",
     "plugin:react/recommended",
-    "standard-with-typescript",
+    "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:prettier/recommended"
   ],
   overrides: [],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    project: "./tsconfig.json",
   },
-  plugins: ["react", "react-hooks", "prettier", "@typescript-eslint", "jest"],
+  plugins: ["react", "@typescript-eslint"],
   rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      },
-    ],
-    "@typescript-eslint/triple-slash-reference": "off",
-    // "jsx-a11y/anchor-is-valid": [
-    //   "error",
-    //   {
-    //     "components": ["Link"],
-    //     "specialLink": ["hrefLeft", "hrefRight"],
-    //     "aspects": ["invalidHref", "preferButton"]
-    //   },
+    indent: ["error", 2],
+    "linebreak-style": ["error", "windows"],
+    quotes: ["error", "double"],
+    semi: ["error", "always"],
+    // '@typescript-eslint/array-type': [
+    //     'error',
+    //     { default: 'generic' }
     // ],
   },
-  settings: {
-    react: {
-      version: "detect",
-    }
-  }
-}
+};
