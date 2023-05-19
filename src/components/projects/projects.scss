@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -16,12 +18,8 @@ $mediaMedium: 1200px;
   .project-header-title {
     margin: 5vh;
     font-size: calc(24px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
-    background-image: linear-gradient(45deg, #6303B1, #ff0099);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
-        filter: drop-shadow(2px 2px #000);
+    color: white;
+    filter: drop-shadow(2px 2px #000);
     font-weight: 900;
   }
 
@@ -61,11 +59,11 @@ $mediaMedium: 1200px;
         transform: scale(1);
       }
 
-      &:hover > .project-card-header{
+      &:hover > .project-card-header {
         filter: grayscale(0);
       }
 
-      &:hover > .project-card-footer{
+      &:hover > .project-card-footer {
         height: 8vh;
         width: 32vw;
         bottom: 0;
@@ -77,31 +75,32 @@ $mediaMedium: 1200px;
           width: 55vw;
         }
         & > div {
-            transform: scale(1);
-            height: auto;
+          transform: scale(1);
+          height: auto;
         }
       }
 
       .project-card-header {
         @include flex-center;
         filter: grayscale(100%);
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
         height: 100%;
         width: 100%;
-  
+
         .project-details {
           width: 90%;
-          background: hsla(0, 0%, 0%, .5);
+          background: hsla(0, 0%, 0%, 0.5);
           border-radius: 20px;
           transform: scale(0);
-          transition: .5s ease-in-out;
+          transition: 0.5s ease-in-out;
           white-space: pre-wrap;
+          color: white;
 
           & > p {
-              text-align: center;
-              margin: 4% 0;
-              font-weight: 500;
-              font-size: calc(12px + (20 - 14) * ((50vw - 300px) / (1600 - 300)));
+            text-align: center;
+            margin: 4% 0;
+            font-weight: 500;
+            font-size: calc(12px + (20 - 14) * ((50vw - 300px) / (1600 - 300)));
           }
         }
       }
@@ -116,8 +115,8 @@ $mediaMedium: 1200px;
         align-items: center;
         flex-direction: column;
         bottom: 15vh;
-        background: linear-gradient(45deg, #6303B1, #ff0099);
-        transition: .5s ease-in-out, width .8s, height .5s;
+        background: $grade-color;
+        transition: 0.5s ease-in-out, width 0.8s, height 0.5s;
 
         @media screen and (max-width: $mediaMobile) {
           width: 60vw;
@@ -128,6 +127,7 @@ $mediaMedium: 1200px;
         }
 
         .project-footer-title {
+          color: white;
           font-weight: bold;
           font-size: calc(18px + (24 - 14) * ((100vw - 300px) / (1600 - 300)));
           text-shadow: none;
@@ -136,18 +136,21 @@ $mediaMedium: 1200px;
 
         .project-footer-links-container {
           transform: scale(0);
-          transition: all .5s ease-in-out;
+          transition: all 0.5s ease-in-out;
           height: 0;
 
           .project-footer-link {
-            margin: 0 1vw;
-            padding: 1.5px 3px;
-            text-decoration: none;
-            font-weight: 600;
-            color: white;
-            border-radius: 8px;
-            &:hover {
-                background-color: hsla(0, 0%, 0%, .5);
+            & > a {
+              margin: 0 1vw;
+              padding: 1.5px 3px;
+              text-decoration: none;
+              font-weight: 600;
+              color: white;
+              border-radius: 8px;
+              &:hover {
+                background-color: hsla(0, 0%, 0%, 0.5);
+                text-decoration: none;
+              }
             }
           }
         }

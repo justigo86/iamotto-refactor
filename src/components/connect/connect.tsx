@@ -101,15 +101,19 @@ const Connect = (): ReactElement => {
           </button>
           <p
             className="submit-response"
-            // opacity={response}
-            // transform={response}
+            style={{
+              opacity: response ? "1" : "0",
+              transform: response ? "none" : "translateY(20%)",
+            }}
           >
             Thank you for your submission.
           </p>
           <p
             className="submit-response"
-            // opacity={response}
-            // transform={response}
+            style={{
+              opacity: response ? "1" : "0",
+              transform: response ? "none" : "translateY(20%)",
+            }}
           >
             By the way, your smile is radiant!
           </p>

@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 @mixin form-styles {
   width: 100%;
   text-align: left;
@@ -8,6 +10,9 @@
     background-color: hsl(210, 31%, 80%);
   }
 }
+
+$mediaMobile: 800px;
+$mediaMedium: 1200px;
 
 .connect-container {
   height: 80vh;
@@ -20,11 +25,7 @@
   .connect-title {
     font-size: calc(24px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
     margin: 3vh;
-    background-image: linear-gradient(45deg, #6303b1, #ff0099);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
+    color: white;
     filter: drop-shadow(2px 2px #000);
     font-weight: 900;
   }
@@ -34,13 +35,13 @@
     position: relative;
     display: inline-block;
     border-radius: 30px;
-    background-image: linear-gradient(45deg, #6303b1, #ff0099);
-    // ${media.medium} {
-    //   width: 50vw;
-    // }
-    // ${media.mobile} {
-    //   width: 70vw;
-    // }
+    background-image: $grade-color;
+    @media screen and (max-width: $mediaMobile) {
+      width: 70vw;
+    }
+    @media screen and (max-width: $mediaMedium) {
+      width: 50vw;
+    }
 
     .connect-form {
       display: flex;
@@ -49,6 +50,7 @@
       flex-direction: column;
       font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
       font-weight: 800;
+      color: white;
       text-shadow: 2px 2px #000;
       margin: 3vh 3vw 1vh;
 
@@ -97,11 +99,6 @@
     }
   }
 }
-
-// const media = {
-//   mobile: '@media(max-width: 800px)',
-//   medium: '@media(max-width: 1200px)'
-// }
 
 // const UploadFormInput = styled.input`
 //     height: 0;

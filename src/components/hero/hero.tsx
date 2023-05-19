@@ -14,22 +14,6 @@ import "./hero.scss";
 //   "am not convinced I know how to read. I've just memorized a lot of words."
 // ];
 
-// const heroLoad = keyframes `
-//   0% {
-//       left: -8vw;
-//   }
-// `
-
-// const imageLoad = keyframes `
-//     0% {
-//         /* right: -3vw; */
-//         opacity: 0;
-//     }
-//     100% {
-//         opacity: 1;
-//     }
-// `
-
 // const cycleIntros = () => {
 //     let key = Object.keys(intros);
 //     let rand = key[Math.floor(Math.random() * key.length)];

@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 @mixin animate($duration) {
   animation: $duration;
 }
@@ -39,42 +41,42 @@
       left: -5vw;
     }
   }
-  animation: menuLoad .5s;
+  animation: menuLoad 0.5s;
 }
 
 .burger {
-  background: linear-gradient(45deg, #6303B1, #ff0099);
-  height: clamp(0.25rem, .3rem, 2rem);
+  background: white;
+  height: clamp(0.25rem, 0.3rem, 2rem);
   width: min(1.9rem, 6vw);
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
   &::before,
   &::after {
-      content: '';
-      position: absolute;
-      background: linear-gradient(45deg, #6303B1, #ff0099);
-      width: clamp(0.25rem, 2.5rem, 3.5rem);
-      height: clamp(0.25rem, .3rem, 2rem);
-      width: min(2.5rem, 8vw);
+    content: "";
+    position: absolute;
+    background: white;
+    width: clamp(0.25rem, 2.5rem, 3.5rem);
+    height: clamp(0.25rem, 0.3rem, 2rem);
+    width: min(2.5rem, 8vw);
 
-      border-radius: 8px;
-      transition: transform 0.5s ease-in-out;
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
   }
   &::before {
-    transform: rotate(0deg) translateY(-.8rem);
-  };
+    transform: rotate(0deg) translateY(-0.8rem);
+  }
   &::after {
-    transform: rotate(0deg) translateY(.8rem);
-  };
+    transform: rotate(0deg) translateY(0.8rem);
+  }
 }
 
 .burger-clicked {
   background: transparent;
   &::before {
-    transform: rotate(45deg) translateY(13px) translateY(-.8rem);
+    transform: rotate(45deg) translateY(13px) translateY(-0.8rem);
   }
   &::after {
-    transform: rotate(-45deg) translateY(-13px) translateY(.8rem);
+    transform: rotate(-45deg) translateY(-13px) translateY(0.8rem);
   }
 }
 
@@ -91,7 +93,7 @@
 }
 
 .navbar-tags {
-  color: inherit;
+  color: white;
   font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: bold;
   transition: 0.3s ease-in-out all;
@@ -99,15 +101,15 @@
   text-decoration: none;
   cursor: pointer;
   & > span {
-      color: #9338df;
-      font-size: clamp(1rem, 2vw, 2rem);
-      vertical-align: top;
+    color: #0473fc;
+    font-size: clamp(1rem, 2vw, 2rem);
+    vertical-align: top;
   }
   &:hover {
-      background-image: linear-gradient(45deg, #6303B1, #ff0099);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    background-image: $grade-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
