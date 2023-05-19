@@ -1,102 +1,102 @@
-// const ConnectContainer = styled.div `
-//   height: 80vh;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
-//   overflow: hidden;
-// `
+@mixin form-styles {
+  width: 100%;
+  text-align: left;
+  margin: 0 0 1vh;
+  padding: 2px;
+  border-radius: 5px;
+  &:focus {
+    background-color: hsl(210, 31%, 80%);
+  }
+}
 
-// const ConnectTitle = styled.h1`
-//   font-size: calc(24px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
-//   margin: 3vh;
-//   background-image: linear-gradient(45deg, #6303B1, #ff0099);
-//   background-clip: text;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   text-shadow: none;
-//   filter: drop-shadow(2px 2px #000);
-//   font-weight: 900;
-// `
+.connect-container {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
 
-// const ConnectFormContainer = styled.div`
-//   /* border: 2px solid white; */
-//   position: relative;
-//   display: inline-block;
-//   border-radius: 30px;
-//   background-image: linear-gradient(45deg, #6303B1, #ff0099);
-//   ${media.medium} {
-//     width: 50vw;
-//   }
-//   ${media.mobile} {
-//     width: 70vw;
-//   }
-// `
+  .connect-title {
+    font-size: calc(24px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
+    margin: 3vh;
+    background-image: linear-gradient(45deg, #6303b1, #ff0099);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(2px 2px #000);
+    font-weight: 900;
+  }
 
-// const ConnectForm = styled.form`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
-//   font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-//   font-weight: 800;
-//   text-shadow: 2px 2px #000;
-//   margin: 3vh 3vw 1vh;
-// `
+  .connect-form-container {
+    /* border: 2px solid white; */
+    position: relative;
+    display: inline-block;
+    border-radius: 30px;
+    background-image: linear-gradient(45deg, #6303b1, #ff0099);
+    // ${media.medium} {
+    //   width: 50vw;
+    // }
+    // ${media.mobile} {
+    //   width: 70vw;
+    // }
 
-// const ConnectFormSections = styled.div`
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-// `
+    .connect-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+      font-weight: 800;
+      text-shadow: 2px 2px #000;
+      margin: 3vh 3vw 1vh;
 
-// const formStyles = css `
-//   width: 100%;
-//   text-align: left;
-//   margin: 0 0 1vh;
-//   padding: 2px;
-//   border-radius: 5px;
-//   &:focus {
-//     background-color: hsl(210, 31%, 80%)
-//   }
-// `
+      .connect-form-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-// const ConnectFormLabels = styled.div`
-//   ${formStyles}
-// `
+        .connect-form-label {
+          @include form-styles;
+        }
 
-// const ConnectFormInputs = styled.input`
-//   ${formStyles}
-//   height: 4vh;
-// `
+        .connect-form-input {
+          @include form-styles;
+          height: 4vh;
+        }
 
-// const ConnectComments = styled.textarea`
-//   ${formStyles}
-//   height: 8vh;
-// `
+        .connect-comments {
+          @include form-styles;
+          height: 8vh;
+        }
+      }
 
-// const ConnectSubmitButton = styled.button`
-//   padding: 4px;
-//   font-weight: 900;
-//   font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
-//   border-radius: 8px;
-//   cursor: pointer;
-//   margin: 4px;
-//   background: transparent;
-//   color: white;
-//   border-color: white;
-//   &:hover {
-//     background-color: hsl(210, 31%, 80%);
-//   }
-// `
+      .connect-submit-button {
+        padding: 4px;
+        font-weight: 900;
+        font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 4px;
+        background: transparent;
+        color: white;
+        border-color: white;
+        &:hover {
+          background-color: hsl(210, 31%, 80%);
+        }
+      }
 
-// const SubmitReponse = styled.p`
-//   opacity: ${props => props.opacity ? '1' : '0'};
-//   transform: ${props => props.transform ? 'none' : 'translateY(20%)'};
-//   transition: all .5s ease-in-out;
-// `
+      .submit-response {
+        // opacity: ${props => props.opacity ? '1' : '0'};
+        // transform: ${props => props.transform ? 'none' : 'translateY(20%)'};
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}
 
 // const media = {
 //   mobile: '@media(max-width: 800px)',

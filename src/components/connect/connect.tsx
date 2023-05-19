@@ -2,6 +2,7 @@ import React, { useState, ReactElement } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "@emailjs/browser";
+import "./connect.scss";
 
 const Connect = (): ReactElement => {
   const [response, setResponse] = useState(false);
@@ -53,7 +54,7 @@ const Connect = (): ReactElement => {
           onSubmit={sendEmail}
           onClick={clearResponse}
         >
-          <div className="connect-form section">
+          <div className="connect-form-section">
             <label className="connect-form-label" htmlFor="name">
               Name:
             </label>
@@ -66,7 +67,7 @@ const Connect = (): ReactElement => {
               required
             />
           </div>
-          <div className="connect-form section">
+          <div className="connect-form-section">
             <label className="connect-form-label" htmlFor="email">
               Email:
             </label>
@@ -79,7 +80,7 @@ const Connect = (): ReactElement => {
               required
             />
           </div>
-          <div className="connect-form section">
+          <div className="connect-form-section">
             <label className="connect-form-label" htmlFor="comments">
               Comments/Message:
             </label>
