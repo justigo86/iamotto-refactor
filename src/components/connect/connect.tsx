@@ -24,11 +24,11 @@ const Connect = (): ReactElement => {
       )
       .then(
         result => {
-          console.log(result.text);
+          console.log(result.text, "Email successfully sent.");
           setResponse(true);
         },
         error => {
-          console.log(error.text);
+          console.log(error.text, "Email failed to send.");
         },
       );
     e.currentTarget.reset();

@@ -1,18 +1,17 @@
 import React, { ReactElement } from "react";
 import { Link } from "react-scroll";
-// import image from "../../photos/coffee1.jpg";
-// import resume from "../photos/JOttoCV102021.pdf";
+import Typed from "react-typed";
 import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt } from "react-icons/fa";
 import "./hero.scss";
 
-// const intros = [
-//   "am committed to improving every day.",
-//   "hope you like it here.",
-//   "think dogs are the best.",
-//   "eat more tacos than I should.",
-//   "know what you did last summer.",
-//   "am not convinced I know how to read. I've just memorized a lot of words."
-// ];
+const intros = [
+  "am committed to improving every day.",
+  "hope you like it here.",
+  "think dogs are the best.",
+  "eat more tacos than I should.",
+  "know what you did last summer.",
+  "am not convinced I know how to read. I've just memorized a lot of words.",
+];
 
 // const cycleIntros = () => {
 //     let key = Object.keys(intros);
@@ -29,14 +28,14 @@ const Hero = (): ReactElement => {
         <p>Web Developer</p>
         <p className="hero-descriptions">
           and I&nbsp;
-          {/* <Typed
+          <Typed
             className="typed"
             strings={intros}
             typeSpeed={12}
             backSpeed={10}
             backDelay={2500}
             loop
-          /> */}
+          />
         </p>
         <div className="hero-links">
           <Link
