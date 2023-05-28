@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import image1 from "../../photos/RoboFriendsCap.jpg";
 import image2 from "../../photos/PennyGalleryCapture2.jpg";
 import image3 from "../../photos/SmartBrainCapture.jpg";
+import image5 from "../../photos/CrownClothingHomepage.png";
 
 interface ProjectInfo {
   projectId: number;
@@ -16,6 +17,18 @@ interface ProjectInfo {
 }
 
 const cardInfo: ProjectInfo[] = [
+  {
+    projectId: 4,
+    projectTitle: "E-Commerce Shopping App",
+    projectDetails: `E-commerce inspired clothing store app. 
+      User account with shopping cart capability.
+      Project part of Complete React Developer course.
+      Front End: React (HTML5, CSS3, JSX), Redux
+      Back End: Firebase/Firestore`,
+    projectLink1: "https://justigo86.github.io/crd_capstone_dev/",
+    projectLink2: "https://github.com/justigo86/crd_capstone_dev",
+    projectImg: image5,
+  },
   {
     projectId: 3,
     projectTitle: "Face Detection App",
@@ -45,7 +58,7 @@ const cardInfo: ProjectInfo[] = [
     projectDetails: `React App used to dynamically search hash database. 
       Project part of Zero to Mastery Web Development course.
       Front End: React (HTML5, CSS3, JSX)`,
-    projectLink1: "http://smart-brain-jotto.herokuapp.com/",
+    projectLink1: "https://justigo86.github.io/robofriends/",
     projectLink2: "https://github.com/justigo86/SmartBrain",
     projectImg: image1,
   },

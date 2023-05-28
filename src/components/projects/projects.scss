@@ -25,6 +25,9 @@ $mediaMedium: 1200px;
 
   .project-card-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     @media screen and (max-width: $mediaMobile) {
       flex-direction: column;
     }
@@ -48,6 +51,7 @@ $mediaMedium: 1200px;
       @media screen and (max-width: $mediaMobile) {
         width: 80vw;
         flex-direction: column;
+        min-width: 5rem;
       }
 
       @media screen and (max-width: $mediaMedium) {
@@ -113,6 +117,7 @@ $mediaMedium: 1200px;
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         flex-direction: column;
         bottom: 15vh;
         background: $grade-color;
