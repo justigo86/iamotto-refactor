@@ -8,29 +8,34 @@ const About = (): ReactElement => {
   AOS.init();
   return (
     <div className="about-container" id="about">
-      <div className="about-info-container" data-aos="fade-right">
-        <h1 className="about-title">About</h1>
-        <p className="about-paragraph">
-          After years spent in post-secondary administration, I&#39;ve decided
-          to take the leap into web development. What started years ago as a
-          hobby in my free time has become a passion and something I&#39;m
-          committed to pursuing professionally.
-        </p>
-        <h2 className="about-title subheading">Competencies</h2>
-        <p className="about-paragraph">
-          HTML5 / CSS3 / JavaScript / React / JSX / NPM / JSON / Git / Bash
-        </p>
-        <h2 className="about-title subheading">Used in the Past</h2>
-        <p className="about-paragraph">
-          SQL / Node.js / Express.js / Java / PHP
-        </p>
-      </div>
-      <div className="about-image-container" data-aos="fade-left">
-        <p className="pup-title banzai-title">BANZAI</p>
-        <img className="about-image" src={image1} alt="" />
-        <p className="pup-title penny-title">
-          PENNY <p>(sans snot)</p>
-        </p>
+      <h1 className="about-title" data-aos="fade-right">
+        About
+      </h1>
+      <div className="about-content-container">
+        <div className="about-info-container" data-aos="fade-right">
+          <p className="about-paragraph">
+            I started in the industry primarily as a frontend developer but been
+            blessed with opportunities to contribute to projects in a full-stack
+            capacity. Always learning, building, and growing to push myself to
+            be a better developer.
+          </p>
+          <h2 className="about-title subheading">Competencies</h2>
+          <p className="about-paragraph">
+            HTML / CSS / JavaScript / TypeScript / React / Angular / JSON / SQL
+            / AWS
+          </p>
+          <h2 className="about-title subheading">Used in the Past</h2>
+          <p className="about-paragraph">
+            XML / DynamoDB / Node.js / Express.js / Java / PHP
+          </p>
+        </div>
+        <div className="about-image-container" data-aos="fade-left">
+          <p className="pup-title banzai-title">BANZAI</p>
+          <img className="about-image" src={image1} alt="" />
+          <p className="pup-title penny-title">
+            PENNY <p>(sans snot)</p>
+          </p>
+        </div>
       </div>
     </div>
   );
