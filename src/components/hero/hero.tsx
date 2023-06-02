@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import { Link } from "react-scroll";
 import Typed from "react-typed";
 import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt } from "react-icons/fa";
+import resume from "../../photos/Justin_Otto_Resume.pdf";
 import "./hero.scss";
 
 const intros = [
@@ -91,7 +92,7 @@ const Hero = (): ReactElement => {
         <li className="hero-icons">
           <a
             id="linked"
-            href="https://www.linkedin.com/in/justin-otto-ed-s-60b449100"
+            href="https://www.linkedin.com/in/justin-otto-m-s-ed-s-60b449100"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -99,7 +100,12 @@ const Hero = (): ReactElement => {
           </a>
         </li>
         <li className="hero-icons">
-          <a id="resume" href="" target="_blank" rel="noreferrer noopener">
+          <a
+            id="resume"
+            href={resume}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <FaRegFileAlt />
           </a>
         </li>
