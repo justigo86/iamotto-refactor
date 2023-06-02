@@ -14,6 +14,7 @@ $mediaMedium: 1200px;
   @include flex-center;
   min-height: 80vh;
   overflow: hidden;
+  margin-bottom: 10vh;
 
   .project-header-title {
     margin: 5vh;
