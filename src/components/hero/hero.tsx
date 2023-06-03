@@ -1,17 +1,19 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useRef, useEffect } from "react";
 import { Link } from "react-scroll";
-import Typed from "react-typed";
+// import Typed from "react-typed";
 import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt } from "react-icons/fa";
 import resume from "../../photos/Justin_Otto_Resume.pdf";
 import "./hero.scss";
+import Typed from "typed.js";
 
 const intros = [
   "am committed to improving every day.",
+  "believe hard work pays off.",
   "hope you like it here.",
   "think dogs are the best.",
   "eat more tacos than I should.",
   "know what you did last summer.",
-  "am not convinced I know how to read. I've just memorized a lot of words.",
+  // "am not convinced I know how to read. I've just memorized a lot of words.",
 ];
 
 // const cycleIntros = () => {
@@ -21,6 +23,23 @@ const intros = [
 // }
 
 const Hero = (): ReactElement => {
+  const el = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: intros,
+      typeSpeed: 0,
+      backSpeed: 0,
+      backDelay: 1500,
+      startDelay: 1000,
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  });
+
   return (
     <div id="home" className="hero-container">
       <div className="hero-background-img" />
@@ -29,14 +48,7 @@ const Hero = (): ReactElement => {
         <p>Web Developer</p>
         <p className="hero-descriptions">
           and I&nbsp;
-          <Typed
-            className="typed"
-            strings={intros}
-            typeSpeed={12}
-            backSpeed={10}
-            backDelay={2500}
-            loop
-          />
+          <span className="typed" ref={el}></span>
         </p>
         <div className="hero-links">
           <Link
