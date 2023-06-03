@@ -79,7 +79,6 @@
     "jest-environment-jsdom": "^29.3.1",
     "jest-ts-auto-mock": "^2.1.0",
     "nodemon": "^2.0.12",
-    "ts-auto-mock": "^3.5.0",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.1.0",
     "ttypescript": "^1.5.13",
