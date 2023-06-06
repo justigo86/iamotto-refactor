@@ -10,10 +10,6 @@ $mediaMedium: 1200px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  @media screen and (max-width: $mediaMobile) {
-    flex-direction: column;
-    height: 110vh;
-  }
   /* border: 2px solid white; */
 
   .about-title {
@@ -28,6 +24,11 @@ $mediaMedium: 1200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    @media screen and (max-width: $mediaMobile) {
+      flex-direction: column;
+      height: 110vh;
+    }
 
     .about-info-container {
       width: 35vw;
@@ -55,6 +56,9 @@ $mediaMedium: 1200px;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-shadow: none;
+        filter: drop-shadow(2px 2px #000);
+        font-weight: 700;
+        margin: 0.5rem 0;
       }
     }
 

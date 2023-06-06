@@ -19,12 +19,12 @@ const About = (): ReactElement => {
             capacity. Always learning, building, and growing to push myself to
             be a better developer.
           </p>
-          <h2 className="about-title subheading">Competencies</h2>
+          <h2 className="subheading">Competencies</h2>
           <p className="about-paragraph">
             HTML / CSS / JavaScript / TypeScript / React / Angular / JSON / SQL
             / AWS
           </p>
-          <h2 className="about-title subheading">Used in the Past</h2>
+          <h2 className="subheading">Used in the Past</h2>
           <p className="about-paragraph">
             XML / DynamoDB / Node.js / Express.js / Java / PHP
           </p>

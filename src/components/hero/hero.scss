@@ -1,5 +1,8 @@
 @import "../../App.scss";
 
+$mediaMobile: 800px;
+$mediaMedium: 1200px;
+
 .hero-container {
   height: 110vh;
   text-align: start;
@@ -16,6 +19,13 @@
     top: 18vh;
     left: 8vw;
     transform: rotate(-25deg);
+
+    @media screen and (max-width: $mediaMobile) {
+      top: 25vh;
+      left: 5vw;
+      transform: rotate(0deg);
+    }
+
     font-weight: 900;
     @keyframes heroLoad {
       0% {
@@ -43,6 +53,10 @@
       & > .typed {
         font-weight: bolder;
         background-image: $grade-color;
+      }
+      @media screen and (max-width: $mediaMobile) {
+        width: 90vw;
+        min-width: 14rem;
       }
     }
 

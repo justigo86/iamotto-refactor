@@ -50,9 +50,9 @@ $mediaMedium: 1200px;
       overflow: hidden;
       margin: 1vh 1vw;
       @media screen and (max-width: $mediaMobile) {
-        width: 80vw;
+        width: 90vw;
         flex-direction: column;
-        min-width: 5rem;
+        min-width: 15rem;
       }
 
       @media screen and (max-width: $mediaMedium) {
@@ -60,20 +60,27 @@ $mediaMedium: 1200px;
         flex-direction: column;
       }
 
+      &:focus > .project-card-header > .project-details,
+      &:active > .project-card-header > .project-details,
       &:hover > .project-card-header > .project-details {
         transform: scale(1);
       }
 
+      &:focus > .project-card-header,
+      &:active > .project-card-header,
       &:hover > .project-card-header {
         filter: grayscale(0);
       }
 
+      &:focus > .project-card-footer,
+      &:active > .project-card-footer,
       &:hover > .project-card-footer {
         height: 8vh;
         width: 32vw;
         bottom: 0;
         @media screen and (max-width: $mediaMobile) {
-          width: 85vw;
+          width: 90vw;
+          min-width: 15.3rem;
         }
 
         @media screen and (max-width: $mediaMedium) {

@@ -37,7 +37,8 @@ $mediaMedium: 1200px;
     border-radius: 30px;
     background-image: $grade-color;
     @media screen and (max-width: $mediaMobile) {
-      width: 70vw;
+      width: 90vw;
+      min-width: 15rem;
     }
     @media screen and (max-width: $mediaMedium) {
       width: 50vw;
