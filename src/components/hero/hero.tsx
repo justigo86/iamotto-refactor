@@ -28,9 +28,9 @@ const Hero = (): ReactElement => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: intros,
-      typeSpeed: 0,
-      backSpeed: 0,
-      backDelay: 1500,
+      typeSpeed: 30,
+      backSpeed: 30,
+      backDelay: 1800,
       startDelay: 1000,
       loop: true,
     });

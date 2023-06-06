@@ -16,14 +16,13 @@ $mediaMedium: 1200px;
 
   .intro-container {
     position: relative;
-    top: 18vh;
-    left: 8vw;
-    transform: rotate(-25deg);
+    top: 22rem;
+    left: 7rem;
+    // transform: rotate(-25deg);
 
     @media screen and (max-width: $mediaMobile) {
       top: 25vh;
       left: 5vw;
-      transform: rotate(0deg);
     }
 
     font-weight: 900;
