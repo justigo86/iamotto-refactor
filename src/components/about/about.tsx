@@ -14,10 +14,12 @@ const About = (): ReactElement => {
       <div className="about-content-container">
         <div className="about-info-container" data-aos="fade-right">
           <p className="about-paragraph">
-            I started in the industry primarily as a frontend developer but been
-            blessed with opportunities to contribute to projects in a full-stack
-            capacity. Always learning, building, and growing to push myself to
-            be a better developer.
+            I started in the industry two yeas ago primarily as a front-end
+            developer but been blessed with opportunities to contribute to
+            projects in a full-stack capacity. Always learning, building, and
+            growing to push myself to be a better developer. I am passionate
+            about building scalable, secure, user-friendly websites and
+            applications through teamwork and critical thinking.
           </p>
           <h2 className="subheading">Competencies</h2>
           <p className="about-paragraph">
